@@ -1,0 +1,12 @@
+.grid {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 10px;
+}
+
+.grid li {
+    border: 1px solid black;
+    width: 10px;
+}
