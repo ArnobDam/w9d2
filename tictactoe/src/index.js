@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let game= new Game();
     let figure= document.querySelector(".ttt");
     let view= new View(game, figure);
-  
+    
   // Your code here
 });
 
