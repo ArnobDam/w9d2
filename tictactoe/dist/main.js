@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\")// require appropriate file\nconst Game = __webpack_require__(/*! ../../../../../ttt_node/game.js */ \"./ttt_node/game.js\") // require appropriate file\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    let game= new Game();\n    let figure= document.querySelector(\".ttt\");\n    let view= new View(game, figure);\n  \n  // Your code here\n});\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\")// require appropriate file\nconst Game = __webpack_require__(/*! ../../../../../../../ttt_node/game.js */ \"./ttt_node/game.js\") // require appropriate file\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    let game= new Game();\n    let figure= document.querySelector(\".ttt\");\n    let view= new View(game, figure);\n  \n  // Your code here\n});\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\
   \*************************/
 /***/ ((module) => {
 
-eval("// const Board = require(\"/ttt_node/board.js\");\n\nclass View {\n  constructor(game, el) {\n    this.el = el;\n    this.setupBoard();\n  }\n\n  setupBoard() {\n    const grid = document.createElement(\"ul\");\n    for (let i = 0; i < 3; i++) {\n      for (let j = 0; j < 3; j++) {\n        let li = document.createElement(\"li\");\n        grid.appendChild(li);\n      }\n    }\n    this.el.appendChild(grid);\n  }\n\n  bindEvents() { }\n\n  handleClick(e) { }\n\n  makeMove(square) { }\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
+eval("// const Board = require(\"/ttt_node/board.js\");\n\nclass View {\n  constructor(game, el) {\n    this.el = el;\n    this.setupBoard();\n  }\n\n  setupBoard() {\n    const grid = document.createElement(\"ul\");\n    grid.setAttribute(\"class\",\"grid\")\n    for (let i = 0; i < 3; i++) {\n      for (let j = 0; j < 3; j++) {\n        let li = document.createElement(\"li\");\n        li.setAttribute(\"class\", `square${i}${j}`)\n        grid.appendChild(li);\n      }\n  }\n    this.el.appendChild(grid);\n  }\n\n  bindEvents() { }\n\n  handleClick(e) { }\n\n  makeMove(square) { }\n\n}\n\nmodule.exports = View;\n\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
 
 /***/ }),
 

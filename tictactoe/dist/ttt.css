@@ -1,12 +1,23 @@
 .grid {
     /* border: 1px solid black; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
-    width: 10px;
+
+    width: 600px;
+    height: 600px;
 }
 
-.grid li {
+.grid>li {
     border: 1px solid black;
-    width: 10px;
+    width: 198px;
+    background-color: grey;
 }
+
+.grid>li:hover{
+    background-color:yellow;
+}
+
+ /* .square00 {
+    background-color: red;
+}  */

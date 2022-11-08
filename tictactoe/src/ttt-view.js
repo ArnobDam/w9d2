@@ -8,12 +8,14 @@ class View {
 
   setupBoard() {
     const grid = document.createElement("ul");
+    grid.setAttribute("class","grid")
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
         let li = document.createElement("li");
+        li.setAttribute("class", `square${i}${j}`)
         grid.appendChild(li);
       }
-    }
+  }
     this.el.appendChild(grid);
   }
 
@@ -26,3 +28,4 @@ class View {
 }
 
 module.exports = View;
+
